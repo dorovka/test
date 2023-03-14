@@ -1,0 +1,36 @@
+{% extends "main/base.html"%}
+
+
+{% block title%}
+{{ title }}
+{% endblock %}
+
+{% block Price%}
+{{ Price }}
+{% endblock %}
+
+{% block tttextt%}
+Плитка-Легко
+{% endblock %}
+
+{% block content%}
+    <h1>Ассортимент</h1>
+    {% if tasks %}
+        {% for el in tasks %}
+            <div class="alert alert-secondary mt-2" role="alert">
+                <h3>{{ el.title }}</h3>
+                <h4>{{ el.Price }}</h4>
+                <p>{{ el.task }}</p>
+                <img src="{{el.image.url}}" height="350"  alt = ''>
+                <img src="{{el.image2.url}}" height="350" alt = ''>
+                <img src="{{el.image3.url}}" height="350" alt = ''>
+                <img src="{{el.image4.url}}" height="350" alt = ''>
+                <img src="{{el.image5.url}}" height="350" alt = ''>
+            </div>
+
+        {% endfor %}
+    {% else %}
+        <p>Товаров нет!</p>
+    {% endif %}
+    <p>Информация о компании... Поставки были произведены...</p>
+{% endblock %}

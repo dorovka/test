@@ -1,0 +1,30 @@
+{% extends "main/base.html"%}
+
+{% block title%}
+Создать товар
+{% endblock %}
+
+{% block tttextt%}
+Плитка-Легко
+{% endblock %}
+
+{% block content%}
+    <h1>Создать товар</h1>
+    <form action = '' method = 'post' enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.title }}<br>
+        {{form.Price}}<br>
+        {{ form.task }}<br>
+        <input type="file" multiple accept="image/jpeg,image/png" name="image" >
+        <input type="file" multiple accept="image/jpeg,image/png" name="image2" >
+        <input type="file" multiple accept="image/jpeg,image/png" name="image3" >
+        <input type="file" multiple accept="image/jpeg,image/png" name="image4" >
+        <br>
+        <input type="file" multiple accept="image/jpeg,image/png" name="image5" >
+        <br>
+        <br>
+        <button type = 'submit' class="btn btn-success">Добавить</button>
+        <span>{{error}}</span>
+
+    </form>
+{% endblock %}
