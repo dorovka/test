@@ -65,7 +65,7 @@ TEMPLATES = [
 ]
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 MEDIA_DIR = MEDIA_ROOT
 
 WSGI_APPLICATION = 'taskmanager.wsgi.application'
@@ -132,7 +132,7 @@ DATABASES['default'].update(db_from_env)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 # The absolute path to the directory where collectstatic will collect static files for deployment.
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 # The URL to use when referring to static files (where they will be served from)
 STATIC_URL = '/static/'
