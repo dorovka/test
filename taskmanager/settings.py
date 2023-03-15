@@ -10,7 +10,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 #SECRET_KEY = 'django__-insecure-uwz2+r!w-l=f)c2&55ndydq7di89imdr0&hw%tia0$_4toce9ah'
-SECRET_KEY=os.environ['SECRET_KEY']
+SECRET_KEY=os.getenv['SECRET_KEY']
 
 DEBUG = False
 
